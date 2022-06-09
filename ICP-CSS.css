@@ -1,0 +1,646 @@
+:root {
+  --PC-h2: 40px;
+  --PC-h2M: 30px;
+  --PC-p: 18px;
+  --PC-tbl: 15px;
+  --PC-priceSize: 24px;
+  --PC-mainText: #ffffff;
+  --PC-linkColor: #6227b9;
+  --PC-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --PC-br1: #29327c;
+  --PC-br2: #6227b9;
+  --PC-br3: #656989;
+  --PC-priceBr: #ffffff;
+  --PC-priceHead: #35419c;
+  --PC-priceEm: #000000;
+  --PC-priceFoot: hsla(233, 15%, 47%, 0.6);
+  --PC-mobileBreak: 992px;
+  --PC-ppWidth: 20%;
+  --PC-obWidth: calc(100% - var(--PC-ppWidth));
+  --PC-footHeight: 10%;
+  --PC-obheight: calc(100% - var(--PC-footHeight));
+  --PC-priceMobHeight: 15%;
+  --PC-obMobheight: calc(
+    100% - var(--PC-footHeight) - var(--PC-priceMobHeight)
+  );
+}
+
+.ICP-grad, .ICP-parent{
+  background: linear-gradient(247deg, #5c25af, #313c91, #313c91, #494e6f);
+ background-size: 1000% 1000%;
+
+ -webkit-animation: aniGrad 19s ease infinite;
+ -moz-animation: aniGrad 19s ease infinite;
+ -o-animation: aniGrad 19s ease infinite;
+ animation: aniGrad 19s ease infinite;
+ transition: 0.5s !important;
+ transition-duration: 0.5s !important;
+ -webkit-transition: background-color 500ms linear;
+ -ms-transition: background-color 500ms linear;
+ transition: background-color 500ms linear;
+}
+
+@-webkit-keyframes aniGrad {
+  0%{background-position:0% 36%}
+  50%{background-position:100% 65%}
+  100%{background-position:0% 36%}
+}
+@-moz-keyframes aniGrad {
+  0%{background-position:0% 36%}
+  50%{background-position:100% 65%}
+  100%{background-position:0% 36%}
+}
+@-o-keyframes aniGrad {
+  0%{background-position:0% 36%}
+  50%{background-position:100% 65%}
+  100%{background-position:0% 36%}
+}
+@keyframes aniGrad {
+  0%{background-position:0% 36%}
+  50%{background-position:100% 65%}
+  100%{background-position:0% 36%}
+}
+
+.ICP-parent, body {
+  height: 100vh;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+  vertical-align: middle;
+
+}
+
+.price-pane {
+  background-color: var(--PC-priceBr);
+}
+
+.card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 0px 0;
+  padding: 0 0 150px 0;
+
+}
+
+.tech-options {
+  max-width: 380px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.tech-options-img {
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.ICP-sub-option {
+  transition: max-height 0.7s, opacity 1s, visibility 1s ease-in-out;
+}
+
+.ICP-priceTrans {
+  transition: max-height 0.7s, opacity 1s, visibility 1s ease-in-out;
+  margin-left:auto;
+  margin-right:auto;
+  overflow: hidden;
+}
+
+.ICP-two-options {
+  max-width: 460px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  
+  
+}
+
+.ICP-two-options-img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; 
+}
+
+#{500_few} img, #slot img, #bnw_back img {
+  float:right;
+}
+
+#more_500 img, #noslot img, #color_back img {
+  float:left;
+}
+
+
+.back-button {
+  position: relative;
+  display: block;
+  padding: 10px 15px 10px 15px; 
+  max-width:100%;
+}
+
+.footer-logo{
+  float:right;
+  max-width: 100%;
+  padding-top:5px;
+}
+
+.price-pre-div {
+  position: absolute;
+  bottom: 65%;
+  width: calc(var(--PC-ppWidth) - 30px);
+  background-color: var(--PC-priceBr);
+  overflow: hidden;
+}
+
+.basePText{
+  text-align: center;
+  font-size: 32px;
+  font-family: var(--PC-font);
+  margin: 5px 10px 5px 10px;
+  color: var(--PC-priceHead);
+  font-weight: 600;
+}
+
+.pre-price-total {
+  margin: 0px 0 0px 0;
+  color: var(--PC-priceEm);
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  font-family: var(--PC-font);
+  overflow: hidden;
+}
+
+/*mobile*/
+@media screen and (max-width: 992px) {
+  .dt-price-pane {
+    float: left;
+    width: 0%;
+  }
+
+  .mobile-price-pane {
+    width: 100%;
+    height: 15%;
+    background-color: #ffffff;
+    top: 0px;
+    padding: 15px 20px 15px 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    opacity: 0.8;
+  }
+  .price-total {
+    margin-top: 10px;
+    color: var(--PC-priceEm);
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 800;
+    overflow: hidden;
+  }
+
+  .pricing-footer {
+    opacity: 0.85;
+    display: flex;
+  }
+
+  .ICP-foot-obj {
+    flex: 33%;
+    max-width:200px;
+  }
+
+  .option-box {
+    width: 100%;
+    height: var(--PC-obMobheight);
+    padding-bottom: var(--PC-footHeight);
+    overflow: hidden;
+  }
+
+  .ICP-sub-option {
+    width: 100%;
+    /*height: var(--PC-obMobheight);*/
+    padding-bottom: var(--PC-footHeight);
+    overflow: hidden;
+  }
+
+  .row {
+    width: 100%;
+  }
+  .tech-options-img {
+    max-width: 85%;
+  }
+
+  .tech-options {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .ICP-two-options-img {
+    max-width: 95%;
+  }
+  .ICP-two-options {
+    flex-basis: 40%;
+    max-width: 99%;
+    min-width: 300px;
+  }
+  .ICP-price-table {
+    display: none;
+  }
+  .h2ICP {
+    color: #ffffff;
+    text-align: center;
+    font-size: var(--PC-h2M);
+    font-family: var(--PC-font);
+    margin: 35px 30px 35px 30px;
+    overflow: hidden;
+  }
+
+  .footer-logo{
+    float : right;
+    display: none;
+  }
+}
+
+/*Tablet*/
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+  .mobile-price-pane {
+    width: 100%;
+    display: none;
+  }
+
+  .dt-price-pane {
+    float: right;
+    width: var(--PC-ppWidth);
+    max-height: 100vh;
+    min-height: 800px;
+    padding: 40px 15px 40px 15px;
+    box-sizing: border-box;
+    border-radius: 0 0 0 20px;
+    overflow: hidden;
+  }
+  .price-total-div {
+    position: absolute;
+    bottom: 45%;
+    width: calc(var(--PC-ppWidth) - 30px);
+    background-color: var(--PC-priceBr);
+    overflow: hidden;
+  }
+  .price-total {
+    color: var(--PC-priceEm);
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    font-family: var(--PC-font);
+    margin: 0px 0 0px 0;
+    overflow: hidden;
+  }
+
+  .option-box {
+    float: left;
+    width: var(--PC-obWidth);
+    height: var(--PC-obheight);
+    overflow: hidden;
+  }
+
+  .ICP-sub-option {
+    float: left;
+    width: var(--PC-obWidth);
+    overflow: hidden;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .tech-options-img {
+    max-width: 95%;
+  }
+  .tech-options {
+    flex-basis: 33%;
+    max-width: 33%;
+  }
+
+  .ICP-two-options-img {
+    max-width: 95%;
+  }
+  .ICP-two-options {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .h2ICP {
+    color: #ffffff;
+    text-align: center;
+    font-size: var(--PC-h2);
+    font-family: var(--PC-font);
+    margin: 35px 30px 35px 30px;
+    overflow: hidden;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width: 1400px) {
+  .mobile-price-pane {
+    width: 100%;
+    display: none;
+  }
+
+  .dt-price-pane {
+    float: right;
+    width: var(--PC-ppWidth);
+    max-height: 100vh;
+    min-height: 800px;
+    padding: 40px 15px 40px 15px;
+    box-sizing: border-box;
+    border-radius: 0 0 0 20px;
+    overflow: hidden;
+  }
+
+  .price-total-div {
+    position: absolute;
+    bottom: 53%;
+    width: calc(var(--PC-ppWidth) - 30px);
+    background-color: var(--PC-priceBr);
+    overflow: hidden;
+  }
+
+
+  .price-total {
+    margin: 0px 0 0px 0;
+    color: var(--PC-priceEm);
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    font-family: var(--PC-font);
+    overflow: hidden;
+
+  }
+
+  .option-box {
+    float: left;
+    width: var(--PC-obWidth);
+    height: var(--PC-obheight);
+    overflow: hidden;
+  }
+
+  .ICP-sub-option {
+    float: left;
+    width: var(--PC-obWidth);
+    overflow: hidden;
+    padding-bottom: 0px !important;
+  }
+
+  .row {
+    width: 100%;
+    height: var(--PC-obheight);
+  }
+
+  .tech-options-img {
+    max-width: 95%;
+  }
+  .tech-options {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .ICP-two-options-img {
+    max-width: 100%;
+    max-height: 65vh;
+  }
+  .ICP-two-options {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .h2ICP {
+    color: #ffffff;
+    text-align: center;
+    font-size: var(--PC-h2);
+    font-family: var(--PC-font);
+    margin: 35px 30px 35px 30px;
+    overflow: hidden;
+  }
+}
+
+.pICP {
+  color: #ffffff;
+  text-align: center;
+  font-size: var(--PC-p);
+  font-family: var(--PC-font);
+}
+
+.h3ICP {
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  font-family: var(--PC-font);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pricing-footer {
+  width: 100%;
+  position: -webkit-fixed;
+  position: fixed;
+  z-index: 100;
+  bottom: 0px;
+  background-color: var(--PC-priceFoot);
+  height: var(--PC-footHeight);
+  padding: 15px 20px 15px 20px;
+  display: flex;
+}
+
+.ICP-foot-obj {
+  flex: 33%;
+  padding-right:50px;
+  padding-left: 15px;
+}
+
+.price-head {
+  text-align: center;
+  overflow: hidden;
+
+  margin-top: 0;
+}
+
+.pricingHeaders {
+  color: var(--PC-priceHead);
+  font-family: var(--PC-font);
+  font-size: var(--PC-priceSize);
+  font-weight: 700;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+.ICP-selected {
+  transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.22);
+ -ms-transform: scale(1.2, 1.2);
+ -webkit-transform: scale(1.2, 1.2);
+ -o-transform: scale(1.2, 1.22);
+  border-radius: 15px;
+  
+}
+
+.ICP-unselected {
+  background: none;
+}
+
+.ICP-price-table {
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  font-size: var(--PC-tbl);
+  margin-top: 15px;
+}
+
+.ICP-price-table tr {
+  width: 100%;
+}
+
+.ICP-price-table td:first-child {
+  color: var(--PC-priceHead);
+  text-align: center;
+  width: 60% !important;
+}
+
+.ICP-price-table td:nth-child(2) {
+  color: var(--PC-priceHead);
+  text-align: left;
+  width: 40%;
+  color: var(--PC-priceEm);
+  font-weight: 800;
+  padding-left: 7px;
+}
+
+.ICP-fine {
+  font-family: var(--PC-font);
+  color: var(--PC-linkColor);
+  text-align: center;
+  margin-top: 5px;
+  font-size: var(--PC-tbl);
+  font-weight: 500;
+  text-decoration: underline;
+  overflow: hidden;
+}
+
+/* The Modal (background) */
+.ICP-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.ICP-modal-cont {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 1% 2% 1% 3%;
+  border: 0px solid #888;
+  width: 80%;
+  border-radius: 20px;
+  font-family: var(--PC-font);
+  font-size: var(--PC-p);
+  color: var(--PC-priceHead);
+}
+
+/* The Close Button */
+.ICPclose {
+  color: #aaa;
+  float: right;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--PC-font);
+}
+
+.ICPclose:hover,
+.ICPclose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ICPMO {
+  /*
+  opacity: 1.0 ;
+  filter: alpha(opacity=100) ; 
+  */
+  transition: 0.5s !important;
+  transition-duration: 0.5s !important;
+}
+
+.ICPMO:hover {
+  cursor: pointer !important;
+  transition: 0.5s !important;
+  transition-duration: 0.5s !important;
+  transform: scale(1.15, 1.15);
+  -moz-transform: scale(1.15, 1.15);
+ -ms-transform: scale(1.15, 1.15);
+ -webkit-transform: scale(1.15, 1.15);
+ -o-transform: scale(1.15, 1.15);
+}
+
+.ICPMO:active:hover {
+  cursor: pointer !important;
+  transition: 0.5s !important;
+  transition-duration: 0.5s !important;
+  transform: scale(.9, .9);
+  -moz-transform: scale(.9,.9);
+ -ms-transform: scale(.9,.9);
+ -webkit-transform: scale(.9,.9);
+ -o-transform: scale(.9,.9);
+}
+
+.setup-btn {
+  width:40%;
+  background-color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  font-family: var(--PC-font);
+  font-weight: 800;
+  font-size: 25px;
+  color: #29327c;
+}
+
+.cont-btn {
+  width:30%;
+  background-color: #ffffff;
+  padding: 4px 7px 4px 7px;
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  font-family: var(--PC-font);
+  font-weight: 800;
+  font-size: 20px;
+  color: #29327c;
+}
+
+.bigMsg {
+  text-align: center !important;
+  font-size: 25px;
+}
+
+.ICP-mod-text{
+  text-align: center;
+  padding-right: 50px;
+}
